@@ -1,0 +1,100 @@
+<mvc:View xmlns:internal="sap.landvisz.internal" controllerName="at.clouddna.student04.zhoiu5vn.controller.Customer"
+xmlns:core="sap.ui.core"
+ xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <f:SimpleForm
+                id="app_simpleform"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="{i18n>title}"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <f:content>
+                    <Label id="app_label_customerid1" text="{i18n>app.customerid}" labelFor="app_text_customerid" />
+                    <Text id="app_text_customerid1" text="1000001" />
+                    <Label id="app_label_customerid2" text="{i18n>app.customername}" labelFor="app_text_customerid" />
+                    <Text id="app_text_customerid2" text="Schmeisser" />
+                </f:content>
+            </f:SimpleForm>
+            <HBox id="app_hbox_customerid">
+                <items>
+                    <Label id="app_label_customerid" text="Kundennummer" labelFor="app_text_customerid" />
+                    <Text id="app_text_customerid" text="1000001" />
+                </items>
+            </HBox>
+
+            <l:VerticalLayout id="_IDGenVerticalLayout1" class="sapUiContentPadding">
+                <Button id="_IDGenButton1" text="hello23" press="onPress" />
+                <Button id="_IDGenButton2" text="hello" press="onPress" />
+                <Label id="lbl1" text="nice" />
+            </l:VerticalLayout>
+            <HBox id="customer_hbox_customer_id" />
+
+
+<Input value="hello I can see you" id="no_key" visible="{= ${/gender} === 'f' }" />
+            <f:SimpleForm
+                id="app_simpleform_1"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="{i18n>title}"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <f:content>
+                    <Label id="app_label_customeridx" text="{i18n>app.customerid}" labelFor="app_text_customerid" />
+                    <Text id="app_text_customeridx" text="{/customerid}" />
+
+                    <Label id="app_label_firstname" text="{i18n>app.firstname}" labelFor="app_input_firstname" />
+                    <Input id="app_input_firstname" value="{/firstname}" />
+
+                    <Label id="app_label_lastname" text="{i18n>app.lastname}" labelFor="app_input_lastname" />
+                    <Input id="app_input_lastname" value="{/lastname}" />
+
+                    <Label id="app_label_title" text="{i18n>app.title}" labelFor="app_input_title" />
+                    <Input id="app_input_title" value="{/title}" />
+
+                    <Label id="app_label_gender" text="{i18n>app.gender}" labelFor="app_select_gender" />
+                    <Select id="app_select_gender" selectedKey="{/gender}" items="{genderModel>/genders}">
+                        <items>
+                            <core:Item id="cust_gender_id" key="{genderModel>key}" text="{genderModel>value}" />
+              
+                        </items>
+                    </Select>
+
+                    <Label id="app_label_email" text="{i18n>app.email}" labelFor="app_input_email" />
+                    <Input id="app_input_email" value="max.mustermann@clouddna.at" />
+
+                    <Label id="app_label_phone" text="{i18n>app.phone}" labelFor="app_input_phone" />
+                    <Input id="app_input_phone" value="+43676123123" />
+
+                    <Label id="app_label_website" text="{i18n>app.website}" labelFor="app_input_website" />
+                    <Input id="app_input_website" value="https://clouddna.at" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

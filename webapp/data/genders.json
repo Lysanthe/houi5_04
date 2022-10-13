@@ -1,0 +1,16 @@
+{
+    "genders": [
+        {
+            "key": "f",
+            "value": "female"
+        },
+        {
+            "key": "m",
+            "value": "male"
+        },
+        {
+            "key": "d",
+            "value": "diverse"
+        }
+    ]
+}
