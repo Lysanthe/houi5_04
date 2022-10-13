@@ -15,9 +15,7 @@
             "version": "1.7.5",
             "toolsId": "122f72e8-ba17-4599-a866-6eeba0cb7934"
         },
-        "dataSources": {
-           
-        }
+        "dataSources": {}
     },
     "sap.ui": {
         "technology": "UI5",
@@ -90,9 +88,16 @@
             "routes": [
                 {
                     "name": "RouteCustomer",
-                    "pattern": ":?query:",
+                    "pattern": "customer:",
                     "target": [
                         "TargetCustomer"
+                    ]
+                },
+                {
+                    "name": "Main",
+                    "pattern": "",
+                    "target": [
+                        "Main"
                     ]
                 }
             ],
@@ -103,6 +108,13 @@
                     "clearControlAggregation": false,
                     "viewId": "Customer",
                     "viewName": "Customer"
+                },
+                "Main": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Main",
+                    "viewName": "Main"
                 }
             }
         },

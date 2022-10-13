@@ -1,6 +1,4 @@
-<mvc:View xmlns:internal="sap.landvisz.internal" controllerName="at.clouddna.student04.zhoiu5vn.controller.Customer"
-xmlns:core="sap.ui.core"
- xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View xmlns:internal="sap.landvisz.internal" controllerName="at.clouddna.student04.zhoiu5vn.controller.Customer" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
             <f:SimpleForm
@@ -43,8 +41,7 @@ xmlns:core="sap.ui.core"
             </l:VerticalLayout>
             <HBox id="customer_hbox_customer_id" />
 
-
-<Input value="hello I can see you" id="no_key" visible="{= ${/gender} === 'f' }" />
+            <Input value="hello I can see you" id="no_key" visible="{= ${/gender} === 'f' }" />
             <f:SimpleForm
                 id="app_simpleform_1"
                 editable="true"
@@ -80,7 +77,7 @@ xmlns:core="sap.ui.core"
                     <Label id="app_label_gender" text="{i18n>app.gender}" labelFor="app_select_gender" />
                     <Select id="app_select_gender" selectedKey="{/gender}" items="{genderModel>/genders}">
                         <items>
-                            <core:Item id="cust_gender_id" key="{genderModel>key}" text="{path: 'genderModel>', formatter: '.genderFormatter'}" />              
+                            <core:Item id="cust_gender_id" key="{genderModel>key}" text="{path: 'genderModel>', formatter: '.genderFormatter'}" />
                         </items>
                     </Select>
 
@@ -95,5 +92,12 @@ xmlns:core="sap.ui.core"
                 </f:content>
             </f:SimpleForm>
         </content>
+        <footer>
+            <Bar id="bar_footer">
+                <contentRight>
+                    <Button id="btn_accept" text="speichern" type="Accept" icon="sap-icon://save" press="onSavePressed" />
+                </contentRight>
+            </Bar>
+        </footer>
     </Page>
 </mvc:View>
