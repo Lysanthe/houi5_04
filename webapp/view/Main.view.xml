@@ -1,7 +1,8 @@
-<mvc:View xmlns:internal="sap.landvisz.internal" controllerName="at.clouddna.student04.zhoiu5vn.controller.Main" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View xmlns:internal="sap.landvisz.internal" controllerName="at.clouddna.student04.zhoiu5vn.controller.Main" 
+xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <Table id="tbl" headerText="{i18n>main.tableHeader}" items="{/customers}">
+            <Table id="tbl" headerText="{i18n>main.tableHeader}" items="{/CustomerSet}">
                 <columns>
                     <Column id="main_column_customerid">
                         <Text id="main_text_customerid" text="{i18n>app.customerid}" />
@@ -34,10 +35,10 @@
                             <ObjectIdentifier id="oi" title="{customerid}" />
                             <Text id="txt1" text="{firstname}" />
                             <Text id="txt2" text="{lastname}" />
-                            <Text id="txt3"text="{title}" />
-                            <Text id="txt4"text="{= ${gender} === 'female' ? ${i18n>female} : ${i18n>male} }" />
-                            <Text id="txt5"text="{email}" />
-                            <Text id="txt6"text="{phone}" />
+                            <Text id="txt3" text="{title}" />
+                            <Text id="txt4" text="{= ${gender} === 'female' ? ${i18n>female} : ${i18n>male} }" />
+                            <Text id="txt5" text="{email}" />
+                            <Text id="txt6" text="{phone}" />
                             <Link id="txt7" text="{website}" href="https://{website}" target="_blank" />
                         </cells>
                     </ColumnListItem>
