@@ -27,6 +27,9 @@
                     <Column id="main_column_website" minScreenWidth="Desktop">
                         <Text id="main_text_website" text="{i18n>app.website}" />
                     </Column>
+                    <Column id="_IDGenColumn1">
+                        <Text id="txtDelete" text="{i18n>delete}" />
+                    </Column>
                 </columns>
                 <items>
                     <ColumnListItem id="cli" highlight="{= ${Gender} === '1' ? 'Error': 'Success'}">
@@ -39,6 +42,7 @@
                             <Text id="_IDGenText5" text="{Email}" />
                             <Text id="_IDGenText6" text="{Phone}" />
                             <Link id="_IDGenLink1" text="{Website}" href="https://{website}" target="_blank" />
+                            <Button id="btn_delete" icon="sap-icon://delete" type="Reject" press="onDeleteButtonPressed" />
                         </cells>
                     </ColumnListItem>
                 </items>
