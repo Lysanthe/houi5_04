@@ -1,10 +1,9 @@
-<mvc:View xmlns:internal="sap.landvisz.internal" controllerName="at.clouddna.student04.zhoiu5vn.controller.Main" 
-xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View xmlns:internal="sap.landvisz.internal" controllerName="at.clouddna.student04.zhoiu5vn.controller.Main" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
             <Table id="tbl" headerText="{i18n>main.tableHeader}" items="{/CustomerSet}">
                 <columns>
-                    <Column id="main_column_customerid">
+                    <Column id="main_column_customerid" visible="false">
                         <Text id="main_text_customerid" text="{i18n>app.customerid}" />
                     </Column>
                     <Column id="main_column_firstname">
@@ -30,16 +29,16 @@ xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xm
                     </Column>
                 </columns>
                 <items>
-                    <ColumnListItem id="cli" highlight="{= ${gender} === 'female' ? 'Error': 'Success'}">
+                    <ColumnListItem id="cli" highlight="{= ${Gender} === '1' ? 'Error': 'Success'}">
                         <cells>
-                            <ObjectIdentifier id="oi" title="{customerid}" />
-                            <Text id="txt1" text="{firstname}" />
-                            <Text id="txt2" text="{lastname}" />
-                            <Text id="txt3" text="{title}" />
-                            <Text id="txt4" text="{= ${gender} === 'female' ? ${i18n>female} : ${i18n>male} }" />
-                            <Text id="txt5" text="{email}" />
-                            <Text id="txt6" text="{phone}" />
-                            <Link id="txt7" text="{website}" href="https://{website}" target="_blank" />
+                            <ObjectIdentifier id="oi" title="{CustomerId}" />
+                            <Text id="_IDGenText1" text="{Firstname}" />
+                            <Text id="_IDGenText2" text="{Lastname}" />
+                            <Text id="_IDGenText3" text="{AcademicTitle}" />
+                            <Text id="_IDGenText4" text="{= ${Gender} === '1' ? ${i18n>female} : ${i18n>male} }" />
+                            <Text id="_IDGenText5" text="{Email}" />
+                            <Text id="_IDGenText6" text="{Phone}" />
+                            <Link id="_IDGenLink1" text="{Website}" href="https://{website}" target="_blank" />
                         </cells>
                     </ColumnListItem>
                 </items>
