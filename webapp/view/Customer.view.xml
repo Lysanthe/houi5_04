@@ -80,8 +80,7 @@ xmlns:core="sap.ui.core"
                     <Label id="app_label_gender" text="{i18n>app.gender}" labelFor="app_select_gender" />
                     <Select id="app_select_gender" selectedKey="{/gender}" items="{genderModel>/genders}">
                         <items>
-                            <core:Item id="cust_gender_id" key="{genderModel>key}" text="{genderModel>value}" />
-              
+                            <core:Item id="cust_gender_id" key="{genderModel>key}" text="{path: 'genderModel>', formatter: '.genderFormatter'}" />              
                         </items>
                     </Select>
 
